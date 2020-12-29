@@ -15,4 +15,8 @@ export class NoteserviceService {
   getAllNotes(){
     return this.http.get('notes/getNotesList');
   }
+
+  updateNote(data:any){
+    return this.http.post('notes/updateNotes',data)
+   }
 }

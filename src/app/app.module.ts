@@ -21,6 +21,11 @@ import {MatListModule} from '@angular/material/list';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { NoteComponent } from './components/note/note.component';
 import { TakenoteComponent } from './components/takenote/takenote.component';
+import { DisplaynoteComponent } from './components/displaynote/displaynote.component';
+import { UpdateComponent } from './components/update/update.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +36,9 @@ import { TakenoteComponent } from './components/takenote/takenote.component';
     DashboardComponent,
     ResetpasswordComponent,
     NoteComponent,
-    TakenoteComponent
+    TakenoteComponent,
+    DisplaynoteComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,7 @@ import { TakenoteComponent } from './components/takenote/takenote.component';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,MatCardModule,MatIconModule,HttpClientModule,MatSidenavModule,MatToolbarModule,
-    MatListModule
+    MatListModule,MatMenuModule,MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DisplaynoteComponent } from './components/displaynote/displaynote.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { LoginComponent } from './components/login/login.component';
 import { NoteComponent } from './components/note/note.component';
@@ -21,7 +22,9 @@ const routes: Routes = [{ path: 'register', component: RegisterComponent },
                       
                             { path: 'note', component: NoteComponent }
                           ]
-                        }
+                        },
+                        {path:'dsplaynote',component:DisplaynoteComponent}
+                        
 ];
 
 @NgModule({

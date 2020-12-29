@@ -1,2 +1,3 @@
 <p>note works!</p>
-<app-takenote></app-takenote>
+<app-takenote (messageEvent)="receiveMessage($event)"></app-takenote>
+<app-displaynote [AllNotes]="notes" ></app-displaynote>
