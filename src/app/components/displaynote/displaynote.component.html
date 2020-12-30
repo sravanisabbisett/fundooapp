@@ -11,7 +11,7 @@
                 <p class="wordBreakTitle">{{card.title}}</p>
               </div>
               <div fxFlex="10" fxLayoutAlign="start start" class="div">
-                <button mat-icon-button matSuffix (click)="pinNote()" (click)="pin()" *ngIf="!isTrash"
+                <button mat-icon-button matSuffix (click)="pinNote(card)" (click)="pin()" *ngIf="!isTrash"
                   matTooltip="unPin Note">
                 </button>
               </div>
@@ -25,7 +25,7 @@
           </div>
           <div style="height:2vh;"></div>
           <div class="div">
-            <!-- <app-icon [note]="card"></app-icon> -->
+            <app-icon [note]="card"></app-icon>
           </div>
         
         </mat-card>

@@ -9,7 +9,7 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 })
 export class DisplaynoteComponent implements OnInit {
   open=true;
-  pinNote(){
+  pinNote(card:any){
 
   };
   pin(){

@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { UserserviceService } from 'src/app/Services/userservice/userservice.service';
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -31,22 +34,6 @@ export class RegisterComponent implements OnInit {
     return pass === confirmPass ? null : { notSame: true }
   }
 
-
-  /*register($event:any){
-    let reqdata = {
-      firstname: this.registerForm.value.firstname,
-      lastname: this.registerForm.value.lastname,
-      email: this.registerForm.value.email,
-      password: this.registerForm.value.password,
-      
-    }
-
-    console.log(" req data ", reqdata);
-    console.log(" calling register", $event);
-    
-
-  }*/
- 
   public hasError=(controlName:string,errorName:string)=>{
     return this.registerForm.controls[controlName].hasError(errorName);
   }
@@ -62,6 +49,7 @@ export class RegisterComponent implements OnInit {
 
       this.userService.registerUser(newUser).subscribe(response => {
         console.log(" register successfull", response);
+        
 
       })
     

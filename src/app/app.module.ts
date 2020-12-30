@@ -25,6 +25,8 @@ import { DisplaynoteComponent } from './components/displaynote/displaynote.compo
 import { UpdateComponent } from './components/update/update.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
+import { IconComponent } from './components/icon/icon.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     NoteComponent,
     TakenoteComponent,
     DisplaynoteComponent,
-    UpdateComponent
+    UpdateComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,MatCardModule,MatIconModule,HttpClientModule,MatSidenavModule,MatToolbarModule,
-    MatListModule,MatMenuModule,MatDialogModule
+    MatListModule,MatMenuModule,MatDialogModule,MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

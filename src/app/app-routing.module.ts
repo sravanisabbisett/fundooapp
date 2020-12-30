@@ -9,7 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import {ResetpasswordComponent} from './components/resetpassword/resetpassword.component'
 
 const routes: Routes = [{ path: 'register', component: RegisterComponent },
-                        { path: 'login', component: LoginComponent },
+                        { path: '', component: LoginComponent },
                         { path: 'forgotPassword', component: ForgotPasswordComponent },
                         { path: 'reset', component: ResetpasswordComponent },
                         {

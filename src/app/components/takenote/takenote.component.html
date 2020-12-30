@@ -1,24 +1,9 @@
 <div fxLayoutAlign="center center">
     <mat-card   class="view1" *ngIf="isOpen " (click)="isOpen = !isOpen" [style.background-color]=setColor>
       <div  fxLayout="row" fxLayoutAlign="space-between center" >
-
         <div>
           Take a Note
         </div>
-
-        <!-- <div fxLayout="row">
-          <div>
-            <button mat-icon-button matSuffix (click)="flag= true" matTooltip="new List">
-              <mat-icon>check_box</mat-icon>
-            </button>
-          </div>
-  
-          <div>
-            <button mat-icon-button matSuffix (click)="flag= true" matTooltip="new Note with image">
-              <mat-icon>crop_original</mat-icon>
-            </button>
-          </div>
-        </div> -->
       </div>
     </mat-card>
   <mat-card *ngIf="!isOpen " class="takeNote" [style.background-color]=setColor>
@@ -31,8 +16,6 @@
             </div>
             <div>
               <button mat-icon-button matSuffix (click)="hide = !hide" matTooltip="pin">
-                <!-- <img src="../../../assets/image/unpin.svg"> -->
-                <!-- <mat-icon><img src="../../../assets/image/pin .svg"></mat-icon> -->
               </button>
             </div>
           </div>

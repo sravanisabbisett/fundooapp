@@ -9,6 +9,7 @@ export class NoteserviceService {
   constructor(private http:HttpServiceService) { }
 
   createNote(data: any){
+    console.log("data in note service",data);
     return this.http.post('notes/addNotes',data);
   }
 
@@ -19,4 +20,8 @@ export class NoteserviceService {
   updateNote(data:any){
     return this.http.post('notes/updateNotes',data)
    }
+
+   deleteNotes(data:any){
+    return this.http.post('notes/trashNotes',data)
+  }
 }
