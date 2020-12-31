@@ -1,7 +1,7 @@
 <div>
   <div class="mar">
     
-      <div>
+      <div class="display" [ngClass]="{'ListClass':true}">
         <mat-card *ngFor="let card of AllNotes" class="main-card" [style.background-color]=card.color
           fxLayout.xs="column" fxFlex.xs="95">
           <div>

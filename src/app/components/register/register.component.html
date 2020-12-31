@@ -23,12 +23,12 @@
                             <mat-card-subtitle>Create your Fundoo Account</mat-card-subtitle>
                         </div>
   
-                        <div fxLayout="row" fxLayoutWrap fxLayoutGap="10px" fxLayout.xs="column">
-                            <div>
+                        <div class="form-div
+                    ">
                                 <mat-form-field appearance="outline" fxFlex="100" fxFlex.xs="100">
                                     <mat-label>First Name</mat-label>
                                     <input matInput type="text" placeholder="firstname" formControlName="firstname"
-                                        id="fisrtname">
+                                    id="firstname">
                                     <mat-error *ngIf="registerForm.hasError('firstname', 'required')">Name is required
                                     </mat-error>
                                     <mat-error *ngIf="registerForm.hasError('firstname', 'minlength')">name should be
@@ -38,9 +38,6 @@
                                     <mat-hint>Name starts with uppercase</mat-hint>
                                     <mat-icon matSuffix>name</mat-icon>
                                 </mat-form-field>
-                            </div>
-  
-                            <div>
                                 <mat-form-field appearance="outline" fxFlex.xs="100">
                                     <mat-label>Last Name</mat-label>
                                     <input matInput type="text" placeholder="Lastname" formControlName="lastname"
@@ -53,10 +50,9 @@
                                     <mat-hint>Name starts with uppercase</mat-hint>
                                     <mat-icon matSuffix>name</mat-icon>
                                 </mat-form-field>
-                            </div>
                         </div>
   
-                        <div>
+                        <div class="width">
                             <mat-form-field appearance="outline" fxFlex="91" fxFlex.xs="100">
                                 <mat-label>Email</mat-label>
                                 <input matInput type="text" placeholder="Email" class="email" formControlName="email"
@@ -69,39 +65,33 @@
                             </mat-form-field>
                         </div>
   
-                        <div>
-                             <div fxLayout="row" fxLayoutWrap fxLayoutGap="10px" fxLayout.xs="column">
-                                <div>
-                                    <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
-                                        <mat-label>Password</mat-label>
-                                        <input matInput type="text" placeholder="password" formControlName="password" id="password"
-                                        [type]="hide ? 'password' : 'text'">
-                                        <button mat-icon-button matSuffix (click)="hide = !hide"
-                                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                        </button>
-                                        <mat-error *ngIf="registerForm.hasError('required', 'password')">pasword is required</mat-error>
-                                        <mat-error *ngIf="registerForm.hasError('password', 'minlength')">password length should be 6</mat-error>
-                                        <mat-hint>Conatins alphanumeric and spcl characters</mat-hint> 
-                                    </mat-form-field>
-                                </div>
+                        <div class="form-div">
+                            <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
+                                <mat-label>Password</mat-label>
+                                <input matInput type="text" placeholder="password" formControlName="password" id="password"
+                                [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-error *ngIf="registerForm.hasError('required', 'password')">pasword is required</mat-error>
+                                <mat-error *ngIf="registerForm.hasError('password', 'minlength')">password length should be 6</mat-error>
+                                <mat-hint>Conatins alphanumeric and spcl characters</mat-hint> 
+                            </mat-form-field>
                                
-                                <div>
-                                    <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
-                                        <mat-label>Password</mat-label>
-                                        <input matInput type="text" placeholder="Confirm" formControlName="cpassword" id="cpassword"
-                                        [type]="hide ? 'password' : 'text'">
-                                        <button mat-icon-button matSuffix (click)="hide = !hide"
-                                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-                                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                        </button>
-                                        <mat-error *ngIf="registerForm.hasError('required', 'password')">pasword is required</mat-error>
-                                        <mat-error *ngIf="registerForm.hasError('cpassword', 'minlength')">password length should be 6</mat-error>
-                                        <mat-error *ngIf="registerForm.hasError('notSame')"> Passwords did not match</mat-error>
-                                        <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
-                                    </mat-form-field>
-                                </div>
-                            </div>
+                            <mat-form-field [style.fontSize.px]="12" appearance="outline" fxFlex="100" fxFlex.xs="100">
+                                <mat-label>ConfirmPassword</mat-label>
+                                <input matInput type="text" placeholder="Confirm" formControlName="cpassword" id="cpassword"
+                                [type]="hide ? 'password' : 'text'">
+                                <button mat-icon-button matSuffix (click)="hide = !hide"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                                <mat-error *ngIf="registerForm.hasError('required', 'password')">pasword is required</mat-error>
+                                <mat-error *ngIf="registerForm.hasError('cpassword', 'minlength')">password length should be 6</mat-error>
+                                <mat-error *ngIf="registerForm.hasError('notSame')"> Passwords did not match</mat-error>
+                                <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
+                            </mat-form-field>
                         </div>
   
                         <div class="service" fxLayout="row"  fxLayout.sm="column" fxLayout.xs="column"
@@ -109,7 +99,7 @@
                             fxLayoutAlign.sm="space-around center" fxLayoutGap.sm='10%' fxLayoutGap.xs='10%'
                             fxLayoutGap.lg='7%' fxLayoutAlign="space-around none">
                         </div>
-                        <div fxLayoutAlign="space-between center">
+                        <div class="bottom">
                             <a class="signIn" (click)="login()">login in instead</a>
                             <button mat-raised-button color="primary" [disabled]="!registerForm.valid">REGISTER</button>
                         </div>
